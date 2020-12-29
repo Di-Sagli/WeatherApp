@@ -74,18 +74,25 @@
 }
 
 .forecastContainer {
-	background: #e3e3e3;
+	background: inherit;
 	padding: 20px;
 	text-align: center;
+}
+
+.forecastTitle {
+	margin-bottom: 20px;
 }
 
 .forecast {
 	height: 70px;
 	line-height: 70px;
-	width: 300px;
+	width: 240px;
+	margin-bottom: 10px;
 	border-radius: 20px;
 	background: #fff;
+	box-shadow: 3px 2px 15px silver;
 }
+
 
 .forecast span {
 	display: inline-block;
@@ -96,10 +103,46 @@
 
 .foreDetails {
 	height: inherit;
+	white-space: pre;
 }
 
 .minMax {
-	background: purple;
+	background: #e3e3e3;
 	width: 33%;
 	border-radius: inherit;
+	color: #000;
+	font-weight: bold;
+}
+
+.mM {
+	background: #886fff;
+	color: #fff;
+}
+
+.placeToVisit {
+	padding: 20px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.placeToVisit h2 {
+	margin-bottom: 20px;
+}
+
+.firstcity {
+	height: 80%;
+	border-radius: 20px;
+	background: url('../assets/images/paris.jpg') no-repeat center;
+	background-size: cover;
+	box-shadow: 4px 11px 23px #e3e3e3;
+}
+
+.firstcity span {
+	position: relative;
+	top: 86%;
+	left: 50%;
+	font-size: 1.3rem;
+	color: #f9f9f9;
+	font-weight: bold;
+
 }

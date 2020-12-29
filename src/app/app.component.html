@@ -13,10 +13,10 @@
         <div class="currentCityWeather">
           <span class="cityName">Bogota</span><br>
           <span class="iconWeather details">
-            Icon
+            <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="">
           </span>
-          <span class="temperature details">
-            31<sup>°c</sup>
+          <span class="temperature details" style="padding-left: 0">
+            {{c_temperature}}<sup>°c</sup>
           </span>
           <!-- currentCityWeather end -->
         </div> 
@@ -27,47 +27,26 @@
       <!-- ExtraContent -->
         <div class="extraContent">
           <div class="forecastContainer">
-            <h2 class="forecastTitle">3 Days Forecast</h2>
-            <div class="forecast">
-              <span class="iconWeather foreDetails ">
-                Icon
+            <div class="forecastTitle">
+              <strong>3 Days</strong> Forecast</div>
+            <div class="forecast" *ngFor="let foreday of forecastInfo; index as idx">
+              <span class="icon foreDetails ">
+                <img src="http://openweathermap.org/img/w/{{foreday.icon}}.png" alt="">
               </span>
               <span class="day foreDetails">
-                Friday
+                {{foreday.day}}
               </span>
               <span class="minMax mM foreDetails">
-                20/30
-              </span>
+                {{foreday.min}}<sup>°c</sup>/{{foreday.max}}<sup>°c</sup>
+              </span> 
             </div>
-            <div class="forecast">
-              <span class="iconWeather foreDetails">
-                Icon
-              </span>
-              <span class="day foreDetails">
-                Friday 
-              </span>
-              <span class="minMax foreDetails">
-                20/30
-              </span>
-            </div>
-            <div class="forecast">
-              <span class="iconWeather foreDetails">
-                Icon
-              </span>
-              <span class="day foreDetails">
-                Friday
-              </span>
-              <span class="minMax foreDetails">
-                20/30
-              </span>
+           
+          <!-- forecastContainer -->
           </div>
-        
-        <!-- forecastContainer -->
-        </div>
 
         <!-- PlaceToVisit -->
         <div class="placeToVisit">
-            <h2>Place to Visit</h2>
+            <div class="title"><strong>Place to</strong> Visit</div>
               <div class="firstcity">
                 <span>Paris</span>
               </div>
@@ -75,12 +54,28 @@
 
         <!-- AddLocation -->
         <div class="otherLocation">
-          <div>Paris</div>
-          <div></div>
+          <div class="paris">
+            <div class="otherCity upperDetails">
+              <span class="otherIconCity ">
+                <img src="http://openweathermap.org/img/w/{{parisIcon}}.png" alt="">
+              </span>
+              <span><strong>{{parisTemp}}</strong><sup>°c</sup></span>
+              <span>{{cityName}} </span>
+            </div>
+            <div class="otherCity otherDetails">
+              <span>Humidity {{humidity}}%</span>
+              <span>{{windSpeed}}km/h</span>
+            </div>
+          </div>
+          <div class="addLocation">
+            Add Locations
+          </div>
+        </div>
+        
+        <!-- extracontainer end -->
         </div>
           
 
-    <!-- extracontainer end -->
     </div>
 
   <!-- weatherContainer end -->

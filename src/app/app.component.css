@@ -1,0 +1,105 @@
+/* Estilos del contenedor externo*/
+.container {
+	height: 100vh;
+	width: 100vw;
+	background-color: #e8e4e4;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+/* Estilos del contenedor que muestra el estado del clima*/
+.weatherContainer {
+	width: 90%;
+	max-width: 1200px;
+	height: 90%;
+	margin: 0 auto;
+	border-radius: 22px;
+	background-color: #fff;
+	box-shadow: 3px 3px 14px silver;
+}
+
+.extraContainer{
+	width: 100%; 
+	height: 100%;
+	min-height: 400px;
+}
+
+/* Estilos del clima de la ciudad actual*/
+.weatherBackgroud {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	/*margin-top: 40px;*/
+	height: 45%;
+	border-radius: 20px;
+	background: url('../assets/images/bg1.jpg') no-repeat center;
+	background-size: cover;
+	z-index: -1;
+	opacity: 0.8;
+	overflow: hidden;
+}
+
+.currentCityWeather {
+	z-index: 1;
+	text-align: left;
+}
+
+.cityName {
+	padding-left: 5%;
+	font-size: 4rem;
+	font-weight: bold;
+	color: black;
+	line-height: 2;
+}
+
+.details {
+	margin-top: -20px;
+	padding-left: 5%;
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	font-size: 2rem;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+/* Estilos del contenido inferior*/
+.extraContent {
+	margin: 20px 25px;
+	display: flex;
+	height: 50%;
+	justify-content: space-between;
+}
+
+.forecastContainer {
+	background: #e3e3e3;
+	padding: 20px;
+	text-align: center;
+}
+
+.forecast {
+	height: 70px;
+	line-height: 70px;
+	width: 300px;
+	border-radius: 20px;
+	background: #fff;
+}
+
+.forecast span {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+
+}
+
+.foreDetails {
+	height: inherit;
+}
+
+.minMax {
+	background: purple;
+	width: 33%;
+	border-radius: inherit;
+}

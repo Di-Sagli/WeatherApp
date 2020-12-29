@@ -17,6 +17,7 @@
 	border-radius: 22px;
 	background-color: #fff;
 	box-shadow: 3px 3px 14px silver;
+	padding-bottom: 10px;
 }
 
 .extraContainer{
@@ -173,15 +174,14 @@
 	border-radius: 10px;
 }
 
-.otherLocation.paris {
+.paris {
 	width: 100%;
-	height: 80%;
+	padding: 5px;
+	border-radius: 10px;
+	height: auto;
+	box-shadow: 3px 3px 5px #aeaeae;
 }
 
-.otherLocation.addLocation {
-	width: 100%;
-	height: 20%;
-}
 
 .otherCity {
 	width: 100%;
@@ -202,6 +202,19 @@
 .otherDetails {
 	color: #333;
 	font-size: 0.8rem;
+}
+
+.addLocation {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 20px;
+	font-size: 1.2rem;
+	background: #eeeeee;
+	padding-bottom: 10px;
 }
 
 /* Para hacerlo responsive*/
@@ -243,4 +256,8 @@
 		font-size: 5vw;
 	}
 
+	.firstcity span {
+		font-size: 1.8rem;
+		top: 70%;
+	}
 }

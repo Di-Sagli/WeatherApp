@@ -20,6 +20,12 @@ export class AppComponent {
   humidity: any; 
   windSpeed: any; 
 
+  LyonIcon: string = '';
+  LyonTemp: any;
+  lcityName: string = '';
+  lhumidity: any; 
+  lwindSpeed: any
+
 
 	icon: String = '';
 	forecastIcons: Array<string> = [];
@@ -32,6 +38,7 @@ export class AppComponent {
   ngOnInit(){
   	this.getWeather(this.city)
     this.getParisWeather('Paris')
+    this.getLyonWeather('Lyon')
     this.getForecast(this.city)
   }
 
@@ -40,13 +47,30 @@ export class AppComponent {
   		if (data) {
   			this.Weather = data;
   			this.icon = this.Weather.weather[0].icon;
-        this.c_temperature = (this.Weather.main.temp  - this.kelvins).toFixed(2);
+        this.c_temperature = (this.Weather.main.temp  - this.kelvins).toFixed(1);
   			// console.log(this.Weather);
   		}else{
   			alert('Error')
   		}
   	})
   }
+
+  getLyonWeather(city:string){
+    this._weather.getWeather(city).subscribe(data => {
+      if (data) {
+        this.Weather = data;
+        this.LyonIcon = this.Weather.weather[0].icon;
+        this.LyonTemp = (this.Weather.main.temp  - this.kelvins).toFixed(1);
+        this.lcityName = this.Weather.name;
+        this.lhumidity = this.Weather.main.humidity;
+        this.lwindSpeed = this.Weather.wind.speed;
+        console.log(this.Weather);
+      }else{
+        alert('Error')
+      } 
+    })
+  }
+
 
   getParisWeather(city:string){
     this._weather.getWeather(city).subscribe(data => {

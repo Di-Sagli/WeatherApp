@@ -4,3 +4,267 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+/* Estilos del contenedor externo*/
+.container {
+	height: 100vh;
+	width: 100vw;
+	background-color: #e8e4e4;
+	display: flex;
+	align-items: center;
+	overflow-y: scroll;
+}
+
+/* Estilos del contenedor que muestra el estado del clima*/
+.weatherContainer {
+	width: 90%;
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	border-radius: 22px;
+	background-color: #fff;
+	box-shadow: 3px 3px 14px silver;
+	padding-bottom: 10px;
+}
+
+.extraContainer{
+	width: 100%; 
+	height: 100%;
+	min-height: 400px;
+}
+
+/* Estilos del clima de la ciudad actual*/
+.weatherBackgroud {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	height: 230px;
+	border-radius: 20px;
+	background: url('./assets/images/bg1.jpg') no-repeat center;
+	background-size: cover;
+	z-index: -1;
+	opacity: 0.8;
+	overflow: hidden;
+}
+
+.currentCityWeather {
+	z-index: 1;
+	text-align: left;
+}
+
+.iconWeather img{
+	width: 4rem;
+}
+
+.cityName {
+	padding-left: 5%;
+	font-size: 4rem;
+	font-weight: bold;
+	color: black;
+	line-height: 2;
+}
+
+.details {
+	margin-top: -20px;
+	padding-left: 5%;
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	font-size: 2rem;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+/* Estilos del contenido inferior*/
+.extraContent {
+	margin: 20px 25px;
+	display: flex;
+	height: 50%;
+	justify-content: space-between;
+}
+
+.forecastContainer {
+	background: inherit;
+	width: 35%;
+	padding: 10px;
+	text-align: center;
+}
+
+.forecastTitle {
+	margin-bottom: 10px;
+	height: 34px;
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+.forecast {
+	display: flex;
+	align-items: flex-end;
+	height: 70px;
+	line-height: 70px;
+	width: 240px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 3px 2px 15px silver;
+}
+
+
+.forecast span {
+	display: inline-block;
+	width: inherit;
+	text-align: center;
+}
+
+.forecast:first-child {
+	background: gold !important;
+}
+
+.day {
+	font-size: .8rem;
+	color: #333;
+}
+
+.foreDetails {
+	height: inherit;
+	white-space: pre;
+}
+
+.minMax {
+	background: #e3e3e3;
+	width: 33%;
+	border-radius: inherit;
+	color: #000;
+	font-weight: bold;
+	margin-top: -8px;
+}
+
+.mM {
+	background: #886fff;
+	color: #fff;
+}
+
+.placeToVisit {
+	padding: 10px;
+	width: 35%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.placeToVisit .title {
+	margin-bottom: 10px;
+	height: 34px;
+	font-size: 1.2rem;
+}
+
+.firstcity {
+	height: 240px;
+	border-radius: 20px;
+	background: url('./assets/images/paris.jpg') no-repeat center;
+	background-size: cover;
+	box-shadow: 4px 11px 23px #e3e3e3;
+}
+
+.firstcity span {
+	position: relative;
+	top: 86%;
+	left: 50%;
+	font-size: 1.3rem;
+	color: #f9f9f9;
+	font-weight: bold;
+
+}
+
+.otherLocation {
+	width: 30%;
+	border-radius: 10px;
+}
+
+.paris {
+	width: 100%;
+	padding: 5px;
+	border-radius: 10px;
+	height: auto;
+	box-shadow: 3px 3px 5px #aeaeae;
+}
+
+
+.otherCity {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 16px;
+}
+
+.otherIconCity {
+	background: #c5eae3;
+	border-radius: 10px;
+}
+
+.upperDetails {
+	border-radius: 10px;
+}
+
+.otherDetails {
+	color: #333;
+	font-size: 0.8rem;
+}
+
+.addLocation {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 20px;
+	font-size: 1.2rem;
+	background: #eeeeee;
+	padding-bottom: 10px;
+}
+
+/* Para hacerlo responsive*/
+@media screen and (max-width: 900px){
+	.container {
+		display: block;
+	}
+
+	.weatherContainer {
+		width: 100%;
+	}
+
+	.weatherBackgroud {
+		margin: 0;
+	}
+
+	.extraContent {
+		display: block;
+	}
+
+	.forecastContainer, .placeToVisit {
+		width: 100%;
+	}
+
+	.forecast {
+		width: inherit;
+	}
+
+	.day {
+		font-size: 5vw;
+	}
+
+	.otherLocation {
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	.upperDetails {
+		font-size: 5vw;
+	}
+
+	.firstcity span {
+		font-size: 1.8rem;
+		top: 70%;
+	}
+}

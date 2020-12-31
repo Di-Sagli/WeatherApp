@@ -64,7 +64,7 @@ export class AppComponent {
         this.lcityName = this.Weather.name;
         this.lhumidity = this.Weather.main.humidity;
         this.lwindSpeed = this.Weather.wind.speed;
-        console.log(this.Weather);
+        // console.log(this.Weather);
       }else{
         alert('Error')
       } 
@@ -81,7 +81,7 @@ export class AppComponent {
         this.cityName = this.Weather.name;
         this.humidity = this.Weather.main.humidity;
         this.windSpeed = this.Weather.wind.speed;
-        console.log(this.Weather);
+        // console.log(this.Weather);
       }else{
         alert('Error')
       }
@@ -108,7 +108,7 @@ export class AppComponent {
          day++;
         })
 
-        console.log(this.forecastInfo)
+        // console.log(this.forecastInfo)
   		}
   	})
   }

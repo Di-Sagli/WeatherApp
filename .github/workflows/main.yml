@@ -13,7 +13,7 @@ jobs:
       with:
         node-version: 10.19.0
     - name: Build and Deploy
-      uses: di-sagli/WeatherPage@releases/v2
+      uses: di-sagli/WeatherPage
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master

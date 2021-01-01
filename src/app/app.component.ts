@@ -48,7 +48,6 @@ export class AppComponent {
   			this.Weather = data;
   			this.icon = this.Weather.weather[0].icon;
         this.c_temperature = (this.Weather.main.temp  - this.kelvins).toFixed(1);
-  			// console.log(this.Weather);
   		}else{
   			alert('Error')
   		}
@@ -64,7 +63,6 @@ export class AppComponent {
         this.lcityName = this.Weather.name;
         this.lhumidity = this.Weather.main.humidity;
         this.lwindSpeed = this.Weather.wind.speed;
-        console.log(this.Weather);
       }else{
         alert('Error')
       } 
@@ -81,7 +79,6 @@ export class AppComponent {
         this.cityName = this.Weather.name;
         this.humidity = this.Weather.main.humidity;
         this.windSpeed = this.Weather.wind.speed;
-        console.log(this.Weather);
       }else{
         alert('Error')
       }
@@ -91,11 +88,9 @@ export class AppComponent {
   getForecast(city:string){
   	this._weather.getForecast(city).subscribe(data => {
   		if(data){
-        // console.log(data)
   			this.ForecastData.push(data.list[1]);
         this.ForecastData.push(data.list[9]);
         this.ForecastData.push(data.list[17]);
-  			// console.log(this.ForecastData);
         
         var day:number = new Date().getDay();
 
@@ -108,7 +103,6 @@ export class AppComponent {
          day++;
         })
 
-        console.log(this.forecastInfo)
   		}
   	})
   }
